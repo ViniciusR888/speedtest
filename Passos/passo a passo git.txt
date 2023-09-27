@@ -1,0 +1,48 @@
+	OBSERVAÇÕES IMPORTANTES
+
+	**Observar se não está logado em uma conta de outro usuario(pode se ver isso em "Gerenciador de credenciais =>Credenciais do Windows",
+	caso esteja, aperte em "remover"
+
+	** No GIT BASH, já se deve está na pasta que deseja enviar os arquivos
+
+	** Usa-se o "MODO 1" ou "MODO 2"
+
+	** Cuidado ao misturar os comandos do "MODO 1" com o "MODO 2"
+====================================================================================================================================================
+
+	COMANDOS DE NAVEGAÇÃO DE PASTAS DENTRO DO GIT BASH
+
+	ls	= ver pastas/arquivos
+
+	cd NomeDaPasta		= entra na pasta que desejar
+
+	cd ..			= volta uma pasta/sai da pasta que está
+
+	mkdir NomeDaPastaQueDesejaCriar		= cria uma pasta no diretorio que está
+====================================================================================================================================================
+
+	MODO 1 - CRIANDO DIRETORIO E SALVANDO NO GITHUB OS PRIMEIROS ARQUIVOS
+
+	git init
+	git add .
+	git commit -m "mensagem que descreve oque está salvando"
+	git branch -m main
+	git remote add origin <link https do diretorio no github>
+	git push -u origin main
+
+====================================================================================================================================================
+
+	MODO 2 - SALVANDO EM UM DIRETORIO JÁ EXISTENTE NO GITHUB
+
+	git init
+	git add .
+	git commit -m "mensagem que descreve oque está salvando"
+	git push -u origin main
+
+
+====================================================================================================================================================
+
+	CLONANDO O DIRETORIO DA NUVEM PARA UM DIRETORIO LOCAL (conseguir ter os arquivos em um outro computador ou em uma outra pasta)
+
+	git clone <LINK HTTPS DO DIRETORIO>
+
