@@ -69,13 +69,13 @@ INSERT INTO Mesa(NumMesa)value('E7');
 INSERT INTO Mesa(NumMesa)value('E8');
 INSERT INTO Mesa(NumMesa)value('E9');
 
-SELECT * FROM Mesa;
-DELETE FROM mesa where id=;/*deleta item da tabela*/
-DROP TABLE Mesa;/*apaga a tabela*/
-DROP DATABASE bardodba;/*apaga o banco de dados*/ 
-TRUNCATE TABLE mesa;/*apaga os itens de uma tabela sem apagar a tabela*/
+/*SELECT * FROM Mesa;
+DELETE FROM mesa where id=;deleta item da tabela
+DROP TABLE Mesa;apaga a tabela
+DROP DATABASE bardodba;apaga o banco de dados
+TRUNCATE TABLE mesa;apaga os itens de uma tabela sem apagar a tabela*/
 SELECT nummesa FROM mesa;/*codigo para contar itens na tabela*/
-SELECT mesa FROM nummesa;
+
 
 CREATE TABLE Comanda (
     id INT PRIMARY KEY auto_increment,

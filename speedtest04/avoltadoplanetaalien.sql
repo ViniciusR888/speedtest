@@ -105,6 +105,10 @@ UPDATE etapa SET fk_verbo_id = 4 WHERE id = 8;
 UPDATE etapa SET fk_verbo_id = 36 WHERE id = 9;
 UPDATE etapa SET fk_verbo_id = 41 WHERE id = 10;
 
+SELECT etapa.instrucao,etapa.ponto,etapa.tipo,verbo.nomeverbo,etapa.id,verbo.id
+FROM etapa
+JOIN verbo ON etapa.fk_verbo_id = verbo.id;
+
 
 
 SELECT * FROM Missao;
