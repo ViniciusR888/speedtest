@@ -2,10 +2,6 @@ CREATE DATABASE avoltadoplanetaalien;
 USE avoltadoplanetaalien;
 SHOW TABLES;
 
-SELECT etapa.instrucao,etapa.ponto,etapa.tipo,verbo.nomeverbo,etapa.id,verbo.id
-FROM etapa
-JOIN verbo ON etapa.fk_verbo_id = verbo.id;
-
 
 SELECT * FROM verbo;
 CREATE TABLE verbo (
