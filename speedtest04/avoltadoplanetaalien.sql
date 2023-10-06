@@ -7,9 +7,6 @@ SELECT bloom.id, bloom.nome, verbo.id, verbo.nomeverbo /*colunas que seram mostr
 FROM bloom	/*de onde vem*/
 INNER JOIN verbo ON bloom.id = verbo.fk_bloom_id;/*para onde vai*/ /*<tabela>*/
 
-/*SELECT <tabela.colunaMostrar>,<tabela.colunaMostrar><tabela.colunaMostrar>
-FROM <tabelaDeOndeVem>
-INNER JOIN <tabelaParaOndeVai> ON <tabelaDeOndeVem.colunaOndeVem> = <tabelaOndeVai.colunaDeOndeVemKeyEstrageira>;*/
 
 SELECT * FROM verbo;
 CREATE TABLE verbo (
@@ -23,9 +20,10 @@ INSERT INTO verbo (nomeverbo,fk_bloom_id)VALUES
 ("Demonstrar",2),("Parafrasear",2),("Associar",2),("Converter",2),("Utilizar",3),
 ("Implementar",3),("Modificar",3),("Experimentar",3),("Calcular",3),("Demonstrar",3),
 ("Classificar",3),("Resolver",4),("Categorizar",4),("Diferenciar",4),("Comparar",4),
-("Explicar",4),("Integrar",4),("Investigar",4),("Defender",5),("Delimitar",5),("Estimar",5),
-("Selecionar",5),("Justificar",5),("Comparar",5),("Explicar",5),("Elaborar",6),("Desenhar",6),
-("Produzir",6),("Prototipar",6),("Traçar",6),("Idear",6),("Inventar",6);
+("Explicar",4),("Integrar",4),("Investigar",4),("Defender",5),("Delimitar",5),
+("Estimar",5),("Selecionar",5),("Justificar",5),("Comparar",5),("Explicar",5),
+("Elaborar",6),("Desenhar",6),("Produzir",6),("Prototipar",6),("Traçar",6),
+("Idear",6),("Inventar",6);
 DELETE FROM verbo WHERE id>=43;
 
 
@@ -33,11 +31,16 @@ DELETE FROM verbo WHERE id>=43;
 SELECT * FROM bloom;
 CREATE TABLE bloom (
     id INT PRIMARY KEY auto_increment,
-    nome VARCHAR(40)
+    nOmeS VARCHAR(40)
 );
+
+ALTER TABLE bloom DROP COLUMN nOmeS;
+ALTER TABLE bloom ADD nome VARCHAR(40);
+
 INSERT INTO bloom (nome) VALUES
 ("Memorizar"),("Compreender"),("Aplicar"),
 ("Analisar"),("Avaliar"),("Criar");
+
 DELETE FROM bloom WHERE id>=7;
 
 
@@ -66,6 +69,7 @@ amigos e construir um novo planeta com justiça e paz.");
 DELETE FROM historia WHERE id=2;
 
 
+
 SELECT * FROM competencia;
 CREATE TABLE competencia (
     id INT PRIMARY KEY auto_increment,
@@ -74,6 +78,7 @@ CREATE TABLE competencia (
 );
 INSERT INTO competencia (descricao) VALUES
 ();
+
 
 
 SELECT * FROM etapa;
@@ -90,6 +95,9 @@ INSERT INTO etapa (instrucao,ponto,tipo) VALUES
 ("Explorar Acampamento Inimigo",10,"C"),("Batalhar Com Boss",15,"A"),
 ("Identificar Detalhes Na Ruina Do Boss",10,"C"),("Criar Upgrade Na Arma",15,"A"),
 ("Destruir Boss Final",20,"H");
+
+DELETE FROM etapa WHERE id>= 11;
+
 UPDATE etapa SET fk_verbo_id = 3 WHERE id = 1;
 UPDATE etapa SET fk_verbo_id = 16 WHERE id = 2;
 UPDATE etapa SET fk_verbo_id = 13 WHERE id = 3;
@@ -100,8 +108,7 @@ UPDATE etapa SET fk_verbo_id = 41 WHERE id = 7;
 UPDATE etapa SET fk_verbo_id = 4 WHERE id = 8;
 UPDATE etapa SET fk_verbo_id = 36 WHERE id = 9;
 UPDATE etapa SET fk_verbo_id = 41 WHERE id = 10;
-SELECT * FROM verbo;
-SELECT * FROM etapa;
+
 
 
 SELECT * FROM Missao;
@@ -113,12 +120,24 @@ CREATE TABLE Missao (
     fk_competencia_id INT,
     fk_etapa_id INT
 );
-INSERT INTO Missao (titulo,forca) VALUES
-("Tags",1),("Selectores",2),("Scrips",3),
-("Exceptions",4),("Conditions",5),("Loops",6),
-("Arrays",7),("Functions",8),("Objects",9),
-("DataBases",10);
-UPDATE Missao SET fk_competencia_id = 1,fk_etapa_id = 1 WHERE id = 1;
+INSERT INTO Missao (hash,titulo,forca) VALUES
+("5125oiu36","Tags",1),("4642sda47","Selectores",2),("7524cvd36","Scrips",3),
+("6985rtr58","Exceptions",4),("2154aad27","Conditions",5),("2745yjh47","Loops",6),
+("8745jtj12","Arrays",7),("8485bcb36","Functions",8),("9564awe58","Objects",9),
+("1255dda47","DataBases",10);
+
+UPDATE Missao SET fk_etapa_id = 1 WHERE id = 1;
+UPDATE Missao SET fk_etapa_id = 1 WHERE id = 2;
+UPDATE Missao SET fk_etapa_id = 1 WHERE id = 3;
+UPDATE Missao SET fk_etapa_id = 1 WHERE id = 4;
+UPDATE Missao SET fk_etapa_id = 1 WHERE id = 5;
+UPDATE Missao SET fk_etapa_id = 1 WHERE id = 6;
+UPDATE Missao SET fk_etapa_id = 1 WHERE id = 7;
+UPDATE Missao SET fk_etapa_id = 1 WHERE id = 8;
+UPDATE Missao SET fk_etapa_id = 1 WHERE id = 9;
+UPDATE Missao SET fk_etapa_id = 1 WHERE id = 10;
+
+
 
 SELECT * FROM MissaoHistoria;
 CREATE TABLE MissaoHistoria (
@@ -129,8 +148,6 @@ CREATE TABLE MissaoHistoria (
 INSERT INTO MissaoHistoria (fk_Missao_id,fk_historia_id) VALUES
 (1,1),(2,1),(3,1),(4,1),(5,1),
 (6,1),(7,1),(8,1),(9,1),(10,1);
-
-
 
 
 
