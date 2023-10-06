@@ -3,10 +3,6 @@ USE avoltadoplanetaalien;
 SHOW TABLES;
 
 
-SELECT bloom.id, bloom.nome, verbo.id, verbo.nomeverbo /*colunas que seram mostradas*/
-FROM bloom	/*de onde vem*/
-INNER JOIN verbo ON bloom.id = verbo.fk_bloom_id;/*para onde vai*/ /*<tabela>*/
-
 
 SELECT * FROM verbo;
 CREATE TABLE verbo (
@@ -139,7 +135,6 @@ UPDATE Missao SET fk_etapa_id = 1 WHERE id = 10;
 
 
 
-SELECT * FROM MissaoHistoria;
 CREATE TABLE MissaoHistoria (
     id INT PRIMARY KEY auto_increment,
     fk_Missao_id INT,
