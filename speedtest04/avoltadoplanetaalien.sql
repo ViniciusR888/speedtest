@@ -130,15 +130,15 @@ INSERT INTO Missao (hash,titulo,forca) VALUES
 ("1255dda47","DataBases",10);
 
 UPDATE Missao SET fk_etapa_id = 1 WHERE id = 1;
-UPDATE Missao SET fk_etapa_id = 1 WHERE id = 2;
-UPDATE Missao SET fk_etapa_id = 1 WHERE id = 3;
-UPDATE Missao SET fk_etapa_id = 1 WHERE id = 4;
-UPDATE Missao SET fk_etapa_id = 1 WHERE id = 5;
-UPDATE Missao SET fk_etapa_id = 1 WHERE id = 6;
-UPDATE Missao SET fk_etapa_id = 1 WHERE id = 7;
-UPDATE Missao SET fk_etapa_id = 1 WHERE id = 8;
-UPDATE Missao SET fk_etapa_id = 1 WHERE id = 9;
-UPDATE Missao SET fk_etapa_id = 1 WHERE id = 10;
+UPDATE Missao SET fk_etapa_id = 2 WHERE id = 2;
+UPDATE Missao SET fk_etapa_id = 3 WHERE id = 3;
+UPDATE Missao SET fk_etapa_id = 4 WHERE id = 4;
+UPDATE Missao SET fk_etapa_id = 5 WHERE id = 5;
+UPDATE Missao SET fk_etapa_id = 6 WHERE id = 6;
+UPDATE Missao SET fk_etapa_id = 7 WHERE id = 7;
+UPDATE Missao SET fk_etapa_id = 8 WHERE id = 8;
+UPDATE Missao SET fk_etapa_id = 9 WHERE id = 9;
+UPDATE Missao SET fk_etapa_id = 10 WHERE id = 10;
 
 
 
